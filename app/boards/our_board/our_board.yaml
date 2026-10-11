@@ -1,0 +1,18 @@
+identifier: our_board
+name: Our custom board
+type: mcu
+arch: arm
+ram: 512
+flash: 2048
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - i2c
+  - gpio
+  - netif:eth
+  - nvs
+testing:
+  ignore_tags:
+    - bluetooth
+vendor: silabs
