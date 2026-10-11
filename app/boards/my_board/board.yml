@@ -1,0 +1,6 @@
+board:
+  name: my_board
+  full_name: My Board
+  vendor: dont care
+  socs:
+  - name: efm32gg11b820f2048gl192

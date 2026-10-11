@@ -1,0 +1,12 @@
+#include <dt-bindings/pinctrl/gecko-pinctrl-s1.h>
+
+&pinctrl {
+	usart4_default: usart4_default {
+		group1 {
+			psels = <GECKO_PSEL(UART_TX, H, 4)>,
+				<GECKO_PSEL(UART_RX, H, 5)>,
+				<GECKO_LOC(UART_TX, 4)>,
+				<GECKO_LOC(UART_RX, 4)>;
+		};
+	};
+};
