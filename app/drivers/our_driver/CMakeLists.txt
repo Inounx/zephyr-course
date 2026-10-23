@@ -1,3 +1,6 @@
 if(CONFIG_OUR_DRIVER)
-    target_sources(app PRIVATE our_driver.c)
+    zephyr_library_named(our_driver)
+    zephyr_include_directories(${CMAKE_CURRENT_LIST_DIR}/include/)
+    zephyr_syscall_header(${CMAKE_CURRENT_LIST_DIR}/include/zephyr/drivers/our_driver.h)
+    zephyr_library_sources(src/our_driver.c)
 endif()
