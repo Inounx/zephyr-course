@@ -3,4 +3,8 @@ if(CONFIG_OUR_DRIVER)
     zephyr_include_directories(${CMAKE_CURRENT_LIST_DIR}/include/)
     zephyr_syscall_header(${CMAKE_CURRENT_LIST_DIR}/include/zephyr/drivers/our_driver.h)
     zephyr_library_sources(src/our_driver.c)
+
+    if(CONFIG_SHELL)
+	    zephyr_library_sources(src/our_driver_shell.c)
+    endif()
 endif()
